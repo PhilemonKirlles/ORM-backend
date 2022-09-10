@@ -1,10 +1,12 @@
-const router = require('express').Router();
-const categoryRoutes = require('./category-routes');
-const productRoutes = require('./product-routes');
-const tagRoutes = require('./tag-routes');
+const router = require("express").Router();
 
-router.use('/categories', categoryRoutes);
-router.use('/products', productRoutes);
-router.use('/tags', tagRoutes);
+const productRoutes = require("./product-routes");
+const categoryRoutes = require("./category-routes");
+const tagRoutes = require("./tag-routes");
+
+router.use("/products", productRoutes);
+
+router.use("/categories", categoryRoutes);
+router.use("/tags", tagRoutes);
 
 module.exports = router;
